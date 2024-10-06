@@ -1,0 +1,250 @@
+:root {
+	--header-height: 101px;
+}
+
+body { 
+    background-color: rgb(233, 229, 229);
+	height: 100%; 
+	margin: 0;
+	padding: 0;  
+	font-size: 16px;
+	font-family: "Courier New";
+}
+
+
+/* --- general styles --- */
+
+.wrapperOneBlock {
+/*Это нужно будет для лк админа*/
+
+background: #fff;
+}
+.tabDocuments{
+	margin: 20px;
+}
+.content {
+	/*! height: 100%; */
+    padding:15px;
+	/*! display: block; */
+	/*margin: 15px;*/
+    background: #fff;
+    min-height: calc(100vh - var(--header-height) - 30px); /*30px = x2 body padding*/
+	text-align: center;
+}
+/* --- Generic forms --- */
+
+form input[type="text"], form input[type="password"] {
+	padding: 0.5em;
+	outline: none;
+	font-size: 16px;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus {
+	border: 2px dashed gray;
+	background-color: lightyellow;
+}
+
+/* table capability */
+
+.tableCapability {
+	max-width: 1200px;
+	min-width: 600px;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.tableCapability th {
+	padding: 1rem;
+	border-width: 1px 0;
+	border-style: dotted;
+	text-transform: uppercase;
+	font-weight: bold;
+	background: lightsteelblue;
+}
+
+.tableCapability tr {
+	text-align: center;
+}
+
+.tableCapability td {
+	padding: 1rem;
+}
+
+.tableCapability tr:nth-of-type(2n) > td {
+	border-style: dotted;
+	border-width: 1px 0;
+	background: rgb(255, 252, 224);
+}
+
+.button {
+ display: inline-block;
+  background: #2196f3;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+  font-family: Tahoma;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 100;
+  cursor: pointer;
+}
+
+/* header style */
+
+#header{
+	background-color: rgb(249, 182, 53);
+	display: flex;
+}
+.website-main-navigation {
+	display: flex;
+	flex-grow: 4;
+}
+a{
+	text-decoration:none;
+}
+
+#header> .exit {
+    flex-grow: 1;
+	max-width: 15%;
+    margin: 0;
+}
+.menu-item {
+	max-width: 33.3%; /* макс. 3 пункта меню */
+	min-width: 250px; /* ширина лого */
+	width: 33.3%;
+	font-family: "Poiret One";
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 30px;
+}
+
+.menu-item:hover {
+	background: linear-gradient(45deg, transparent 0 18%, lightgoldenrodyellow 18%, transparent 82%);
+	cursor: pointer;
+}
+
+.menu-item:hover > a {
+	color: #666;
+	font-weight: bold;
+}
+.menu-item > a {
+	color: #54524d;
+	font-weight: bold;
+	cursor: pointer;
+	transition: color 0.25s;
+}
+
+.menu-exit {
+	font-family: "Poiret One";
+	height: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-size: 22px;
+	border-left: 2px solid #54524d;
+	box-sizing: border-box;
+}
+
+.menu-exit:hover {
+	background: lightgoldenrodyellow;
+	transition: background-color ease-in-out 0.25s;
+	cursor: pointer;
+}
+
+.menu-exit:hover > a {
+	color:rgb(223, 66, 66);
+	font-weight: bold;  
+}
+.menu-exit > a {
+	color:rgb(255, 255, 255);
+	font-weight: bold;
+}
+/* если лого не будет кликабельным - удалить
+#header > img:hover {cursor: pointer;
+	background-color: lightgoldenrodyellow;
+	border-radius: 50%;
+	transition: background-color ease-in-out 0.25s;
+}
+*/
+
+
+
+/* --- Generic forms --- */
+caption{
+	padding: 20px;
+	font-size: 20px;
+}
+form input[type="text"], form input[type="password"] {
+	padding: 0.5em;
+	outline: none;
+	font-size: 16px;
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus {
+	border: 2px dashed gray;
+	background-color: lightyellow;
+}
+
+/* --- Single forms (the form is the only page conent) --- */
+.single-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.single-form p {
+	display: block;
+	min-width: 300px;
+	max-width: 33.33%;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	margin-bottom: 1em;
+}
+
+.single-form p, .single-form #submit {
+	display: block;
+	min-width: 200px;
+	width: 33.33%;
+	margin: 0 auto;
+	margin-bottom: 0px;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+.single-form input:not([type="file"]) {
+	width: 100%;
+}
+/*button*/
+#update {
+
+    text-align: center;
+    background-color: #d7a800;
+    color: white;
+    border-radius: 5%;
+    border-color: #af7800;
+    border-style: solid;
+    border-width: 1px;
+    min-width: 100px;
+    min-height: 50px;
+    font-size: medium;
+    height: 3em;  
+    cursor: pointer;
+  }
+#delete {
+
+	text-align: center;
+	background-color: #d7a800;
+	color: white;
+	border-radius: 5%;
+	border-color: #af7800;
+	border-style: solid;
+	border-width: 1px;
+	min-width: 100px;
+	min-height: 50px;
+	font-size: medium;
+	height: 3em;  
+	cursor: pointer;
+}
